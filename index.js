@@ -1,14 +1,23 @@
 const crypto = require('crypto');
 const fs = require('fs');
 
+try {
+  var privateKey = fs.readFileSync('./signature/privkey.pem');
+} catch(err) {
+  privateKey = null;
+}
+
 module.exports = function (filepath) {
-  const privateKey = 'something';
+  if (!privateKey) {
+    return;
+  }
+
   const sign = crypto.createSign('RSA-SHA256');
 
   try {
     var fileContents = fs.readFileSync(filepath);
   } catch(err) {
-    console.log('error reading input file');
+    console.log('error reading input file: ' + filepath);
     return;
   }
 
