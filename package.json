@@ -2,6 +2,8 @@
   "name": "openfin-sign",
   "version": "1.0.0",
   "description": "A repo to digitally sign OpenFin asars and files.",
+  "author": "OpenFin",
+  "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +11,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/openfin/openfin-sign.git"
-  },
-  "private": true,
-  "author": "OpenFin",
-  "license": ""
+  }
 }
